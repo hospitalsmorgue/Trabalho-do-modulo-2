@@ -1,0 +1,29 @@
+* { box-sizing: border-box; margin: 0; }
+body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; }
+a { color: #58a6ff; word-break: break-all; }
+main { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+.home { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding-top: 18vh; text-align: center; }
+.search { display: flex; gap: .5rem; width: 100%; max-width: 480px; }
+.search input { flex: 1; padding: .75rem 1rem; border-radius: 8px; border: 1px solid #30363d; background: #161b22; color: inherit; font-size: 1rem; }
+button { cursor: pointer; font: inherit; }
+.search button { padding: .75rem 1.25rem; border: 0; border-radius: 8px; background: #238636; color: #fff; font-weight: 600; }
+.search button:disabled { opacity: .6; }
+.error { color: #f85149; }
+.loading { display: flex; align-items: center; gap: .5rem; justify-content: center; margin: 1rem 0; }
+.spinner { width: 18px; height: 18px; border: 3px solid #30363d; border-top-color: #58a6ff; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.back { display: inline-block; margin-bottom: 1.5rem; text-decoration: none; }
+.profile { display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem; }
+.profile img { width: 120px; height: 120px; border-radius: 50%; border: 2px solid #30363d; }
+.login { color: #8b949e; margin: .25rem 0 .5rem; }
+.user-page h2 { margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card { text-align: left; background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1rem; color: inherit; transition: border-color .2s; }
+.card:hover { border-color: #58a6ff; }
+.card h3 { color: #58a6ff; margin-bottom: .5rem; font-size: 1.05rem; word-break: break-word; }
+.card p { color: #8b949e; font-size: .9rem; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: flex; align-items: center; justify-content: center; padding: 1rem; }
+.modal { position: relative; background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 2rem; width: 100%; max-width: 520px; display: flex; flex-direction: column; gap: .75rem; }
+.close { position: absolute; top: .5rem; right: .75rem; background: none; border: 0; color: #8b949e; font-size: 1.75rem; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .profile { flex-direction: column; text-align: center; } .search { flex-direction: column; } }
